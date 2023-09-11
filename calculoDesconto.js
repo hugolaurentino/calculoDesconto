@@ -1,7 +1,8 @@
-const valorProduto = 88
-const parcelas = 1
+const valorProduto = 5000
+const parcelas = 13
 const comDesconto = valorProduto - (valorProduto * 10 / 100)
-const comAcrecimo = valorProduto + (valorProduto * 10 / 100)
+const comAcrecemo = valorProduto * Math.pow(1 + 0.01, parcelas)  //M = C * Math.pow((1 + i), n); J = M - C; tv c/m-1=i
+
 
 if (parcelas === 1) {
     console.log(`
@@ -11,11 +12,16 @@ if (parcelas === 1) {
     console.log(`
     Parcelando em ${parcelas} o valor pago é R$ ${(valorProduto / parcelas).toFixed(2)} sem juros
     `);
-} else {
+} else if (parcelas > 6 && parcelas < 13) {
     console.log(`
-    Parcelando em ${parcelas} o valor pago é R$ ${(comAcrecimo / parcelas).toFixed(2)} com juros 10%
+    Parcelando em ${parcelas} o valor pago é R$ ${(comAcrecemo / parcelas).toFixed(2)} com juros 10%
     `);
+} else {
+    console.log(`Valor de parcelas incompatível`);
 }
+
+
+// console.log(comAcrecimo);
 
 // com ternario
 

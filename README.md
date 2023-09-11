@@ -35,7 +35,7 @@
 ### Sobre
   <p align= 'justify'>
   Na compra de um determinado produto, o cliente consegue um desconto de 10% caso pague à vista.
-  Caso queira parcelar, a loja parcela em até 6x sem juros, mas sem desconto.
+  Caso queira parcelar, a loja parcela em até 6x sem juros, mas sem desconto e entre 7x e 12x será aplicada uma taxa de juros de 1% ao mês
   </p>
 
 
