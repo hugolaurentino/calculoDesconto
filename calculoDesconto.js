@@ -1,5 +1,5 @@
-const valorProduto = 5000
-const parcelas = 13
+const valorProduto = 100
+const parcelas = 7
 const comDesconto = valorProduto - (valorProduto * 10 / 100)
 const comAcrecemo = valorProduto * Math.pow(1 + 0.01, parcelas)  //M = C * Math.pow((1 + i), n); J = M - C; tv c/m-1=i
 
@@ -8,16 +8,16 @@ if (parcelas === 1) {
     console.log(`
     Pagamento a vista, recebeu um desconto de 10% valor a pago é R$ ${comDesconto.toFixed(2)}
     `);
-} else if (parcelas < 7) {
+} else if (parcelas > 1 && parcelas < 7) {
     console.log(`
     Parcelando em ${parcelas} o valor pago é R$ ${(valorProduto / parcelas).toFixed(2)} sem juros
     `);
 } else if (parcelas > 6 && parcelas < 13) {
     console.log(`
-    Parcelando em ${parcelas} o valor pago é R$ ${(comAcrecemo / parcelas).toFixed(2)} com juros 10%
+    Parcelando em ${parcelas}x o valor pago é R$ ${(comAcrecemo / parcelas).toFixed(2)} totalizando R$ ${(comAcrecemo).toFixed(2)} devido a incidencia de juros.
     `);
 } else {
-    console.log(`Valor de parcelas incompatível`);
+    console.log(`Numero de parcelas invalido`);
 }
 
 
