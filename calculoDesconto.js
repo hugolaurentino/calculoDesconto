@@ -21,9 +21,9 @@ if (parcelas === 1) {
 }
 
 
-// console.log(comAcrecimo);
+// console.log(comAcrecemo);
 
-// com ternario
+// com ternário
 
 // const desconto = parcelas === 1 ?
 //     `Pagamento a vista, recebeu um desconto de 10% valor a pago é R$ ${(valorProduto - (valorProduto * 10) / 100).toFixed(2)}` :
